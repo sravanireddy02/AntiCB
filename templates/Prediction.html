@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+                prediction
+        </title>
+    </head>
+    <body>
+        <form action="/Prediction" method = "POST">
+            <input type="text" name = "tweet" required>
+            <button type="submit">predict</button>
+        </form>
+        {% if pred == "gender" %}
+        <h2>{% print(tweet) %}</h2>
+        <h2 style="color:red;">gender</h2>
+        {% elif pred == "age" %}
+        <h2>{% print(tweet) %}</h2>
+        <h2 style="color:red;">age</h2>
+        {% elif pred == "ethnicity" %}
+        <h2>{% print(tweet) %}</h2>
+        <h2 style="color:red;">ethnicity</h2>
+        {% elif pred == "not cyberbullying" %}
+        <h2>{% print(tweet) %}</h2>
+        <h2 style="color:red;">not cyberbullying</h2>
+        {% elif pred == "other cyberbullying" %}
+        <h2>{% print(tweet) %}</h2>
+        <h2 style="color:red;">other cyberbullying</h2>
+        {% elif pred == "religion" %}
+        <h2>{% print(tweet) %}</h2>
+        <h2 style="color:red;">religion</h2>
+        {% endif %}
+    </body>
+</html>
